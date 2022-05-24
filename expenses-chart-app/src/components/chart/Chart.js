@@ -1,12 +1,21 @@
 import { Data } from "./Data";
+import { useMemo } from "react";
 
-export const Chart = () => {
-  const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+export const Chart = (data) => {
+  const dataAmounts = data.data.map((dataItem) => dataItem.amount);
+
+  const maxAmount = useMemo(() => {
+    Math.max(...dataAmounts);
+  }, [dataAmounts]);
 
   return (
     <div id="chart" class="row">
-      {daysOfWeek.map((day) => (
-        <Data day={day} value="3" dataHeight="30" />
+      {data.data.map((dataItem) => (
+        <Data
+          day={dataItem.day}
+          value={dataItem.amount}
+          maxAmount={maxAmount}
+        />
       ))}
     </div>
   );

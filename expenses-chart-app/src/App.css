@@ -35,6 +35,21 @@ p, div, a {
  font-family: DMSans;
 }
 
+p {
+ color: var(--neutral-medium-brown);
+}
+
+#balance-header p {
+ color: var(--neutral-pale-orange)
+}
+
+hr {
+ background-color: var(--neutral-cream);
+ border: 1px solid var(--neutral-cream);
+ height: 0;
+ margin: 9px 0 9px 0;
+}
+
 .column {
  display: flex;
  flex-direction: column;
@@ -79,6 +94,18 @@ body {
  padding: 20px;
 }
 
+#balance-footer {
+ justify-content: space-between;
+}
+
+#balance-footer div:last-of-type {
+ align-items: flex-end;
+}
+
+#balance-footer div {
+ justify-content: flex-end;
+}
+
 #chart {
  padding-top: 9px;
 }
@@ -86,12 +113,14 @@ body {
 #chart .column {
  width: 39px;
  align-items: center;
+ justify-content: flex-end;
 }
 
 .data {
- width: 20px;
+ width: 30px;
  border-radius: 3px;
  margin-top: 5px;
+ cursor: pointer;
 }
 
 .data:hover {
@@ -101,7 +130,7 @@ body {
 .label {
  background-color: black;
  color: var(--neutral-pale-orange);
- width: 45px;
+ padding: 3px 5px 3px 5px;
  text-align: center;
  border-radius: 3px;
 }
