@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div class="attribution">
+    <div class="footer attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor

@@ -7,11 +7,14 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BalanceHeader />
-      <div class="column">
-        <h2>Spending - Last 7 days</h2>
-        <Chart />
-        <BalanceFooter />
+      <div id="balance">
+        <BalanceHeader />
+        <div class="column" id="balance-body">
+          <h3>Spending - Last 7 days</h3>
+          <Chart />
+          <hr/>
+          <BalanceFooter />
+        </div>
       </div>
       <Footer />
     </>

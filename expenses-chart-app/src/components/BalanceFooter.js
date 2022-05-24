@@ -1,6 +1,6 @@
 export const BalanceFooter = () => {
   return (
-    <div id="balance-footer">
+    <div id="balance-footer" class="row">
       <div class="column">
         <p>Total this month</p>
         <h1>$478.33</h1>
